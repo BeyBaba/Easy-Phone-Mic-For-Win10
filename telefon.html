@@ -51,20 +51,21 @@
     
     .code-input-wrapper {
       display: flex;
-      gap: 8px;
+      flex-direction: column;
+      gap: 12px;
     }
     
     .code-input {
-      flex: 1;
-      padding: 16px;
+      width: 100%;
+      padding: 20px;
       border: 2px solid #4361ee;
       border-radius: 12px;
       background: #0a0a15;
       color: #fff;
-      font-size: 24px;
+      font-size: 28px;
       font-family: 'Courier New', monospace;
       text-align: center;
-      letter-spacing: 4px;
+      letter-spacing: 6px;
       text-transform: uppercase;
       outline: none;
     }
@@ -76,13 +77,22 @@
     }
     
     .connect-btn {
-      padding: 16px 24px;
+      width: 100%;
+      padding: 20px;
       border: none;
       border-radius: 12px;
-      background: #4361ee;
+      background: linear-gradient(135deg, #4361ee, #3a0ca3);
       color: white;
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: bold;
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    
+    .connect-btn:active {
+      transform: scale(0.98);
+      opacity: 0.9;
     }
     
     .connect-btn:disabled {
@@ -218,7 +228,7 @@
     <div class="connect-label">Bilgisayardaki 6 haneli kodu gir:</div>
     <div class="code-input-wrapper">
       <input type="text" class="code-input" id="codeInput" placeholder="ABC123" maxlength="6" autocomplete="off" autocapitalize="characters">
-      <button class="connect-btn" id="connectBtn">🔗</button>
+      <button class="connect-btn" id="connectBtn">BAĞLAN</button>
     </div>
   </div>
   
